@@ -1,0 +1,122 @@
+*{box-sizing:border-box}
+html,body{height:100%;scroll-behavior:smooth; zoom: 120%;}
+body{display:flex;flex-direction:column;flex-wrap:nowrap}
+
+/* CSS Loader */
+.loader {margin:0 auto;height: 20px;width: 20px;animation: shine 970ms ease infinite;transform: rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg)}
+@keyframes shine { 50% {outline-width: 7px} 100% {outline-color: white;outline-width: 7px} }
+@-webkit-keyframes shine { 50% {outline-width: 7px} 100% {outline-color: white;outline-width: 7px} }
+@-moz-keyframes shine { 50% {outline-width: 7px} 100% {outline-color: white;outline-width: 7px} }
+@-o-keyframes shine { 50% {outline-width: 7px} 100% {outline-color: white;outline-width: 7px} }
+
+/* Theme color */
+body{background-color:black;color:white;
+    background-image: url("lightning.gif") ,url("lightning2.gif");
+    background-position: left,right;
+    background-repeat: no-repeat no-repeat;
+      background-attachment: fixed;}
+.brand,.heading{color:#F56457}
+.button:hover{background-color:#F56457}
+.loader{outline: 0 solid #FFA101}
+
+/* Back to top */
+.back{text-align:right;position:relative;right:20px}
+section#landing .back,section#random .back,section#latest .back{top:-60px}
+section#mealCardsSection .back{top:0}
+.back img{height:40px;width:40px;transform:rotate(180deg);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg)}
+
+/* Button */
+.button{font-weight:bold;font-size:13px;border:1px solid white;color: white;}
+.button:hover{transition:all 500ms ease;color:white}
+.button,.card{box-shadow: 2px 5px 10px white}
+
+/* Cards */
+.card{border-radius:7px ;margin:10px;background-color: #000;color: white ;font-weight: bold;}
+.card img{width:100%;max-height:150px}
+.card-body{padding:5px 15px}
+.cardTitle{margin-bottom:5px}
+.mealCards{text-align:center;background-color: white;border-radius: 10px;}
+.mealCards .columns{margin-left:0}
+
+/* Chef icon */
+.chefimg{position:absolute;height:39px;width:39px;transform:rotate(32deg);-webkit-transform:rotate(32deg);-moz-transform:rotate(32deg);-o-transform:rotate(32deg)}
+
+/*  Flex */
+.d-flex{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:middle; padding-bottom: 10vh;}
+
+/*Random Recipe button alignment */
+#landing .row:first-child{display: flex; align-items: center;} 
+section#landing .row .chefimg{top:26px; left:160px; position: relative;}
+
+/* Heading */
+.heading{text-transform:uppercase;font-size:40px;font-weight:bold;font-family:'Roboto Slab', serif;transform:rotate(0deg);-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-o-transform:rotate(0deg);text-align:center;margin-bottom:0;padding-bottom: 12vh;}
+
+/* Ingredients */
+.mealMetadata ul > li{margin:0;float:left;width:50%}
+.mealMetadata ul{margin-bottom:0}
+
+/* Meal */
+.mealMetadata span,.mealInstructions span{margin-right:20px;font-weight:bold;text-transform:uppercase}
+.mealImg > img{height:100%;width:100%;border-radius:100%;box-shadow:0px 5px 15px rgba(0,0,0,0.2)}
+
+/* Nav */
+.navbar{padding:10px 0}
+.navbar .columns{height:33px}
+.navbar .nine.columns{padding-top:4px}
+
+/* Section */
+section#landing{display:flex;flex-direction:row;align-items:center;height:75vh}
+section#landing > .container{margin-top:-100px}
+section{height:auto}
+section#landing .chefimg{top:-20px;right:-3px}
+section#random .chefimg{top:5px;right:-14px}
+section#mealCardsSection .chefimg{top:-20px;right:22px}
+
+/* Footer */
+footer{bottom:0;text-align:center}
+
+/* Others */
+a{cursor:pointer}
+.brand{font-size:2rem;font-weight:bold}
+.brand:hover,.brand:visited,.brand:focus{color:#0FA0CE}
+main{justify-content:center;align-items:center}
+#userInput{font-weight:bold}
+
+/* Media queries */
+@media (min-width: 750px) {
+    .navbar {display: block;width: 100%; background:#e2e1e0;z-index: 99;border-bottom: 3px solid black}
+}
+@media (min-width: 750px) {
+    .navbar-list {list-style:none;margin-bottom: 0; float: left;}
+}
+@media (min-width: 750px) {
+    .navbar-item {position:relative;display:inline;}
+}
+@media (min-width: 750px){
+    .navbar-link {text-transform: uppercase;font-size: 11px;font-weight: 600;letter-spacing: .2rem;margin-right: 35px;text-decoration: none;color:black;}
+}
+@media (min-width: 750px){
+    .navbar-link-category {text-transform: uppercase;font-size: 10px;font-weight: 600;letter-spacing: .2rem;margin-right: 10px;text-decoration: none;color:white}
+    #searchRecipe{color: black;}
+}
+
+
+#navList{padding-left: 0;width: 60px; list-style:none;margin-bottom:0;display:inline-block;justify-content:space-evenly;}
+#navBar{position:fixed;padding:7px;display:flex;justify-content:space-evenly;width:100%;background:white;z-index:99;border-top:1px solid #eee;border-bottom:1px solid #eee}
+#navItem{position:relative;display:inline;}
+#navLink{text-transform:uppercase;font-size:1vw;font-weight:600;letter-spacing:.2rem;text-decoration:none;color:#000}
+.button:hover{background-color:#F56457}
+.back{text-align:right;position:fixed;right:20px;bottom:20px}
+.button:hover{transition:all .5s ease;color:#fff}
+.chefimg{height:39px;width:39px;transform:rotate(32deg);-webkit-transform:rotate(32deg);-moz-transform:rotate(32deg);-o-transform:rotate(32deg)}
+#about-section{height:80vh;padding-top:20vh;}
+.brand{font-size:5vw;font-weight:700}
+.brand:focus,.brand:hover,.brand:visited{color:white}
+@media (min-width:440px){
+.brand{font-size:3vw}
+.navbar-link{font-size:1.5vw}}
+@media (max-width:800px){
+.heading{margin:20px;width:80vw}}
+#errorMessageContainer{display: none; background: #F56457; text-align: center;height: 100px; color: white; justify-content: center; align-items: center;}
+#errorMessageText{line-height: 100px; padding: 0px; margin: 0 40px 0 0;}
+#errorMessageBtn{margin: 0px; color: white; border: 1px solid white;}
